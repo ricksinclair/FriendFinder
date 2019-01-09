@@ -1,0 +1,11 @@
+I will loop through each potential friend.
+
+I figured out that the user placing their information in the form will always have the last object in the array, so i can just leave out the last object 
+for comparison.
+
+
+I will assign a name and a score using Math.abs() to make a basic difference no matter whether negative or positive. The smallest score should be the 
+one to 
+match with the user.
+
+
