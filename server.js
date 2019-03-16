@@ -5,12 +5,13 @@ let bodyParser = require("body-parser");
 //Initialize express//
 let app = express();
 let PORT = process.env.port || 3000;
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
-
+let apiRoutes = require("./app/routing/apiRoutes")(app);
+let htmlRoutes = require("./app/routing/htmlRoutes")(app);
+apiRoutes;
+htmlRoutes;
 //Body Parser references
 let jsonParser = bodyParser.json();
-let urlEncoded = bodyparser.urlecoded({ extended: false });
+let urlEncoded = bodyParser.urlencoded({ extended: false });
 let rawParser = bodyParser.raw();
 let textParser = bodyParser.text();
 //I had some questions on the need for body-parser if node already can send/receive data without using it
@@ -23,14 +24,14 @@ let textParser = bodyParser.text();
 //.json parses text as json and exposes it to req. body
 
 //set up body parser for json
-app.use(jsonParser({ type: "application/**json" }));
+app.use(bodyParser.json({ type: "application/**json" }));
 
 //set up bodyparser for raw content
 
 //the .vnd spec allows vendors to specify their own media types for transmission online(formerly known as MIME types)
-app.use(rawParser({ type: "application/vnd.custom-type" }));
+app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 
-app.use(textParser({ type: "text/html" }));
+app.use(bodyParser.text({ type: "text/html" }));
 
 //set express server to listen on PORT reference
 app.listen(PORT, function() {
