@@ -1,6 +1,7 @@
 //Dependencies//
 var express = require("express");
 var path = require("path");
+var app = express();
 
 //Have to set these routes so they may be exported to server.js
 
