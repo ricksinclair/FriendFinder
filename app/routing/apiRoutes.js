@@ -18,7 +18,9 @@ module.exports = function(app) {
     //Get data from database
 
     //map data
+
     //store it in object
+
     //send object as response to the user
   });
 
