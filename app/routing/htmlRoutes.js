@@ -8,7 +8,7 @@ var app = express();
 module.exports = function(app) {
   //HTML Routes//
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   app.get("/survey", function(req, res) {
