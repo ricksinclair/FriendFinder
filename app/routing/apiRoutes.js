@@ -1,6 +1,6 @@
 //Dependencies//
 var express = require("express");
-var Friends = "..data/friends.js";
+var Friends = require("..data/friends.js");
 
 module.exports = function(app) {
   //API Routes//

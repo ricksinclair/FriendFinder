@@ -1,30 +1,7 @@
-let Faker = require("faker")
+let Faker = require("faker");
 
-module.exports={
-
-
-
-Friends: let Friends = "hello",
-
-
-
- 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}}
-
-
+module.exports = {
+  Friends: () => {
+    let Friends = "hello";
+  }
+};
