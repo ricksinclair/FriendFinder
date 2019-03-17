@@ -1,7 +1,6 @@
 //Dependencies//
 var express = require("express");
-var Friends = require("..data/friends.js");
-
+import { Friends } from "/data/friends";
 module.exports = function(app) {
   //API Routes//
   app.get("/api/friends", function(req, res) {
