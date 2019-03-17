@@ -1,10 +1,13 @@
 //Dependencies//
 var express = require("express");
-import { Friends } from "/data/friends";
+
+let Friends = require("../data/friends.js");
+
 module.exports = function(app) {
   //API Routes//
   app.get("/api/friends", function(req, res) {
     res.send(Friends);
+    console.log(Friends);
     //Get data from database
 
     //map data

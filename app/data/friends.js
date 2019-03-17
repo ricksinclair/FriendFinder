@@ -1,7 +1,10 @@
 let Faker = require("faker");
 
 module.exports = {
-  Friends: () => {
-    let Friends = "hello";
-  }
+  Friends: [
+    {
+      name: "Bob",
+      photoUrl: "www.example.com"
+    }
+  ]
 };
